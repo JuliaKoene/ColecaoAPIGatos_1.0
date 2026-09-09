@@ -33,7 +33,7 @@ API REST simples para gerenciar uma coleção de gatos, desenvolvida em Java com
 
 ```json
 {
-  "name": "Miau",
+  "nome": "Lua",
   "idade": 2,
   "peso": 2.3
 }
