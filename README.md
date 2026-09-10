@@ -5,6 +5,9 @@ API REST simples para gerenciar uma coleção de gatos, desenvolvida em Java com
 
 - Cadastrar um novo gato,
 - Listar todos os gatos cadastrados;
+- Retorna gato por nome;
+- Atualiza os dados de um gato;
+- Deleta um gato
 
 ## Tecnologias
 
