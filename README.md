@@ -1,19 +1,23 @@
 # ColeçãoAPIGatos
-API REST simples para gerenciar uma coleção de gatos, desenvolvida em Java com Spring Boot.
+API REST para gerenciar uma coleção de gatos, desenvolvida em Java com Spring Boot.
 
 ## Funcionalidades
 
 - Cadastrar um novo gato,
 - Listar todos os gatos cadastrados;
-- Retorna gato por nome;
-- Atualiza os dados de um gato;
-- Deleta um gato
+- Retornar gato por nome;
+- Retornar gato por ID;
+- Atualizar os dados de um gato;
+- Deletar um gato.
 
 ## Tecnologias
 
 - Java
 - Spring Boot
 - Maven
+- MySQL
+- Docker
+- Hibernate
 
 ## Como executar
 
@@ -27,12 +31,25 @@ API REST simples para gerenciar uma coleção de gatos, desenvolvida em Java com
 
 ## Endpoints
 
-| Método | Endpoint            | Descrição                  |
-|--------|----------------------|-----------------------------|
-| POST   | `/api/v1/gato`       | Cadastra um novo gato       |
-| GET    | `/api/v1/gatos`      | Lista todos os gatos        |
+| Método | Endpoint                         | Descrição                   |
+|--------|----------------------------------|-----------------------------|
+| POST   | `/api/v1/gato`                   | Cadastra um novo gato       |
+| GET    | `/api/v1/gatos`                  | Lista todos os gatos        |
+| GET    | `/api/v1/gatos/findnome/<nome>`  | Encontra gato pelo nome     |
+| GET    | `/api/v1/gatos/findid/<id>`      | Encontra um gato pelo ID    |
+| PUT    | `/api/v1/gatos/update/<id>`      | Atualiza o gato pelo ID     |
+| DELETE | `/api/v1/gatos/<id>`             | Deleta um gato pelo ID      |
 
-### Exemplo de requisição (POST)
+### Atributos da classe *gato*
+
+| Atributo | Tipo     |
+|----------|----------|
+| id       | UUID     |
+| nome     | String   |
+| cor      | String   |
+| peso     | Double   |
+
+### Exemplo de requisição (POST/PUT)
 
 ```json
 {
@@ -44,4 +61,4 @@ API REST simples para gerenciar uma coleção de gatos, desenvolvida em Java com
 
 ## Autor
 
-Julia Koene
+Julia Koene Moreira da Silva
