@@ -59,7 +59,7 @@ API REST para gerenciar uma coleção de gatos, desenvolvida em Java com Spring 
 }
 ```
 
-[Fluxograma do Desenvolvimento do Sistema sem Front-End](Fluxograma.png)
+<img src="https://github.com/JuliaKoene/ColecaoAPIGatos_1.0/blob/main/Fluxograma.png" alt="Fluxograma do Desenvolvimento do Sistema">
 
 ## Autor
 
