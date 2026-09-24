@@ -58,8 +58,21 @@ API REST para gerenciar uma coleção de gatos, desenvolvida em Java com Spring 
   "peso": 2.3
 }
 ```
+## Fluxograma de Desenvolvimento
 
-<img src="https://github.com/JuliaKoene/ColecaoAPIGatos_1.0/blob/main/Fluxograma.png" alt="Fluxograma do Desenvolvimento do Sistema">
+<p align="center">
+   <img src="https://github.com/JuliaKoene/ColecaoAPIGatos_1.0/blob/main/Fluxograma.png" alt="Imagem Fluxograma do Desenvolvimento do Sistema" width=50%>
+</p>
+
+- **Docker**: Roda um container com o MySQL configurado, hospeda o servidor de Banco de Dados;
+  - **MySQL**: Banco de Dados relacional com a tabela `gato`, criado pelo Hibernate pela entidade Java;
+- **Aplicação SpringBoot**: API divida em camadas, faz as consultas e alterações no Bancod e Dados;
+  - **Controller (ControladorGato)**: recebe as requisições HTTP, decide as rotas;
+  - **Service (ServicoGato)**: contém a lógica de negócio, decide o que fazer;
+  - **Repository (RepositorioGato)**: interface que o Spring Data JPA usa para conversar com o banco;
+  - **Hibernate**: traduz os objetos *Gato* em comandos SQL, e traduz os resultados do banco de volta em objetos Java;
+- **Postman**: Simula um cliente fazendo requisições HTTP (GET, POST, PUT, DELETE) para os endpoints, por motivo de teste;
+- **DBeaver**: Conecta direto no MySQL (ignorando a API/Java), para conferir se aa modificações da API alteraram o banco.
 
 ## Autor
 
