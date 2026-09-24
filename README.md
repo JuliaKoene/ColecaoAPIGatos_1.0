@@ -44,10 +44,10 @@ API REST para gerenciar uma coleção de gatos, desenvolvida em Java com Spring 
 
 | Atributo | Tipo     |
 |----------|----------|
-| id       | UUID     |
-| nome     | String   |
-| cor      | String   |
-| peso     | Double   |
+| `id`     | UUID     |
+| `nome`   | String   |
+| `cor`    | String   |
+| `peso`   | Double   |
 
 ### Exemplo de requisição (POST/PUT)
 
